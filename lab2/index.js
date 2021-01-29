@@ -6,8 +6,7 @@ axios('https://pokeapi.co/api/v2/pokemon/magikarp')
         // Uses the 'data' provided from specified api
         const pokemon = response.data;
 
-        // In this example, the above URL will return an object
-        //  pokemon api will return an object with the data on magikarp since it was requested
+        // pokemon api will return an object with the data on magikarp since it was requested
         console.log("This is a " + pokemon.name + " and its ID is " + pokemon.id);
     })
     .catch(function (error) {
