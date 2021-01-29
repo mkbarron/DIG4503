@@ -1,0 +1,11 @@
+{
+  "name": "lab2",
+  "version": "1.0.0",
+  "description": "Lab 2: fetch() Promises using Axios",
+  "main": "index.js",
+  "scripts": {
+    "test": "pokemon"
+  },
+  "author": "MKBarron",
+  "license": "ISC"
+}

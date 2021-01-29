@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mkbarron/DIG4503/issues"
   },
-  "homepage": "https://github.com/mkbarron/DIG4503#readme"
+  "homepage": "https://github.com/mkbarron/DIG4503#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
 }
