@@ -13,4 +13,4 @@ axios('https://pokeapi.co/api/v2/pokemon/magikarp')
     .catch(function (error) {
         // handles errors such as mispelling or if pokemon is missing from data
         console.log("Error: " + error);
-    });
+    }); 
