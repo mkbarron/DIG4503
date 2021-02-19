@@ -1,21 +1,33 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-
+import React, {useState, useEffect} from "react";
 
 const Counter = () => {
     const [count, setCount] = useState(0);
 
-    useEffect(() => {
-        console.log("The use effect ran");
+//componentDidMount
+//useEffect(() => {
+//    console.log("The use effect ran");
+//  }, []);
+
+//componentDidUpdate
+//useEffect(() => {
+//    console.log("The use effect ran");
+//    }, [count]);
+
+//componentWillMount
+useEffect(() => {
+    console.log("The use effect ran");
+    return () => {
+        console.log("the return is being ran");
+    };
 }, []);
 
 return (
-        <div>
-            <h6>Post</h6>
-            <p>Current Posts: {count}</p>
-            <button onClick={() => setCount(count + 1)}>increment the count</button>
+    <div>
+        <h6>Post</h6>
+        <p>Current count: {count}</p>
+        <button onClick={() => setCount(count + 1)}>increment the count</button>
 
-        </div>
+    </div>
     );
 };
 
