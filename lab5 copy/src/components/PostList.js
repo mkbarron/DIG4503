@@ -11,8 +11,8 @@ const PostList = () => {
         });
     }, []);
     return (
-        <div style={{ padding: "50px 20px", textAlign: "center", color: "white"}}>
-            <h1 style={{ padding: "10px 20px", textAlign: "center", color: "white"}}>Michelle's Question of the Day</h1>
+        <div>
+            <h1>Michelle's Question of the Day</h1>
             <h3>If you could have one superpower, what would it be and why? Post below!</h3>
             {posts &&
             posts.map((post) => {
