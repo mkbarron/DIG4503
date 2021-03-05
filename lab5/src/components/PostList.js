@@ -19,7 +19,7 @@ const PostList = () => {
         <div style={{ padding: "30px 20px", textAlign: "center", backgroundColor: "#255957", color: "white"}} >
             <h1 style={{ paddingTop: "30px", paddingBottom: "10px", textAlign: "center", backgroundColor: "#255957", color: "#EEEBD3"}}>Michelle's Question for February</h1>
             <p style={{ paddingTop: "30px", paddingBottom: "50px", marginLeft: "420px", marginRight: "420px", textAlign: "center", color: "#EEEBD3"}}>Last month I asked you this question and I was blown away by your answers! Now it's time to vote
-             for your favorite responses. Winner will be awarded with a $25 gift card to a restaurant of their choice via email. Contest ends March 6th, 2020 at 11:59PM EST. </p>
+             for your favorite responses. Winner will be awarded with a $25 gift card to a restaurant of their choice via email. Contest ends March 6th, 2021 at 11:59PM EST. </p>
             <h3 style={{ padding: "20px 100px", textAlign: "center", backgroundColor: "#F7C548", color: "#255957"}}>If you could have one superpower, what would it be and why? Post below!</h3>
             {posts &&
             posts.map((post) => {
