@@ -1,0 +1,25 @@
+{
+  "name": "lab8",
+  "version": "1.0.0",
+  "description": "database.json and Routes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkbarron/dig4503.git"
+  },
+  "author": "Michelle Barron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkbarron/dig4503/issues"
+  },
+  "homepage": "https://github.com/mkbarron/dig4503#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  },
+  "type": "module"
+}
