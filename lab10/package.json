@@ -1,0 +1,26 @@
+{
+  "name": "lab10",
+  "version": "1.0.0",
+  "description": "database.json and Routes",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd client && npm run build",
+    "server": "nodemon index.js",
+    "start": "concurrently 'npm:build' 'npm:server'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkbarron/dig4503.git"
+  },
+  "author": "Michelle Barron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkbarron/dig4503/issues"
+  },
+  "homepage": "https://github.com/mkbarron/dig4503#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  },
+  "type": "module"
+}
