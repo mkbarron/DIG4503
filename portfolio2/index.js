@@ -1,56 +1,25 @@
-import Express from "express";
-import fs from "fs";
-import cors from "cors";
+import MongoClient from 'mongodb';
+import chalk from "chalk";
 
-const App = Express();
-const port = 3010;
-App.use(cors());
+const URL = "mongodb+srv://mbarron:PvOP3Qz7ObgY81CL@cluster0.oewwc.mongodb.net/";
 
-let fileContents = fs.readFileSync("database.json");
+MongoClient.connect(URL, { useUnifiedTopology: true})
 
-let database = JSON.parse(fileContents);
+.then(connection => {
+    let database = connection.db("grocery");
+    
+    let collection = database.collection("food_sale");
 
-App.use("/", Express.static("client/build"));
+    let cursor = collection.find({sub_group: {$gte:"Grain"}, sale: {$gte:"Y"}});
 
-App.get("/api/employees/name/:name", (req, res) => {
-    let result = {"error": "Not found!"}
-
-        database.forEach((value)  => {
-            if(req.params.name == value.name) {
-                result = value;
-        }
-    });
-
-    res.json(result);
+    cursor.forEach(document => {
+        
+        console.log(`Successfully found this ` + chalk.white.bgBlue(document.name) + ' grocery item ');
+    },  () => {
+        connection.close();
+    })
+    
 })
-
-App.get("/api/ages/:number", (req, res) => {
-    let result = {"error": "Not found!"}
-
-        database.forEach((value)  => {
-            if(req.params.number == value.age) {
-                result = value;
-        }
-    });
-
-    res.json(result);
-})
-
-App.post("/api/employees/:name/:age", (req, res) => {
-     let result = {
-         "name": req.params.name,
-         "age": parseInt(req.params.age)
-     };
-
-     database.push(result);
-
-     fs.writeFileSync("database.json", JSON.stringify(database, null, '\t'));
-
-     res.json(result);
-
+.catch(error => {
+    console.log(chalk.white.bgRed("Error:" + error));
 });
-
-App.listen(port, () => {
-    console.log("Server running!");
-
-})

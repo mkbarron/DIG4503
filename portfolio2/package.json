@@ -1,21 +1,16 @@
 {
-  "name": "portfolio2",
+  "name": "lab11",
   "version": "1.0.0",
-  "description": "final",
+  "description": "",
   "main": "index.js",
-  "author": "Michelle Barron",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michelle",
   "license": "ISC",
   "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd client && npm run build",
-    "server": "nodemon index.js",
-    "start": "concurrently 'npm:build' 'npm:server'"
-  },
   "dependencies": {
-    "concurrently": "^6.0.2",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "nodemon": "^2.0.7"
+    "chalk": "^4.1.1",
+    "mongodb": "^3.6.6"
   }
 }
