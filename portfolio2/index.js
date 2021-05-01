@@ -10,16 +10,16 @@ MongoClient.connect(URL, { useUnifiedTopology: true})
     
     let collection = database.collection("food_sale");
 
-    let cursor = collection.find({sub_group: {$gte:"Grain"}, sale: {$gte:"Y"}});
+    let cursor = collection.find({sub_group: {$gte:"Tropical Fruit"}, sale: {$gte:"on sale"}});
 
     cursor.forEach(document => {
         
-        console.log(`Successfully found this ` + chalk.white.bgBlue(document.name) + ' grocery item ');
+        console.log(`Successfully found this ` + chalk.black.bgWhite(document.food_name) + ' that is ' + chalk.black.bgGreen(document.sale) + ' today.');
     },  () => {
         connection.close();
     })
     
 })
 .catch(error => {
-    console.log(chalk.white.bgRed("Error:" + error));
+    console.log(chalk.red.bgWhite("Error:" + error));
 });
